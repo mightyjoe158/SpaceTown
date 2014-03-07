@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: ecd52a86ff47e4b73893761691239712
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - floorPrefab: {fileID: 400000, guid: af736d62be17f49ecabd2341c66ebec8, type: 2}
+  - floorMakerPrefab: {fileID: 400000, guid: f2e9a446d8bec48438eb3b32364572a1, type: 2}
+  - endOfFloorMakerPreFab: {fileID: 400000, guid: c4b034b06c33d4aa4b77dc1cffe45cca,
+      type: 2}
+  - wallPreFab: {fileID: 400000, guid: dce6c4826977f4ee48cde3697ce45ffa, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
