@@ -1,0 +1,15 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\itemScript.cs">
+    <Files>
+      <File FileName="Assets\scripts\itemScript.cs" Line="17" Column="7" />
+      <File FileName="Assets\scripts\weaponScript.cs" Line="45" Column="2" />
+      <File FileName="Assets\scripts\bulletScript.cs" Line="33" Column="50" />
+      <File FileName="Assets\scripts\pelletScript.cs" Line="37" Column="50" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
