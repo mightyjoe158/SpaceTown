@@ -1,6 +1,6 @@
 //Maya ASCII 2013 scene
 //Name: Enemy.ma
-//Last modified: Sun, Mar 09, 2014 02:00:40 PM
+//Last modified: Sun, Mar 09, 2014 02:05:24 PM
 //Codeset: 1252
 requires maya "2013";
 currentUnit -l centimeter -a degree -t film;
@@ -11,13 +11,13 @@ fileInfo "cutIdentifier" "201202220241-825136";
 fileInfo "osv" "Microsoft Windows 7 Home Premium Edition, 64-bit Windows 7 Service Pack 1 (Build 7601)\n";
 createNode transform -s -n "persp";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 0.68086547448905543 15.282057363080472 -62.449134458053543 ;
-	setAttr ".r" -type "double3" 171.86164727003089 -2.2000000000504167 179.99999999999991 ;
+	setAttr ".t" -type "double3" -6.7158866218312596 45.169840009053793 -48.302639626579875 ;
+	setAttr ".r" -type "double3" 140.66164727003093 -7.0000000000503801 179.99999999999991 ;
 createNode camera -s -n "perspShape" -p "persp";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999986;
 	setAttr ".ncp" 0.001;
-	setAttr ".coi" 62.868589841590968;
+	setAttr ".coi" 63.942475805182518;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
