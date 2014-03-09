@@ -44,6 +44,11 @@ public class weaponScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		initialCamera = transform.position;
+		initialCamera.y +=12f;
+		finalCamera = initialCamera;
+		finalCamera.y += 7f;
+		
 		//left mouse button keyed to 'fire'
 		if(Input.GetMouseButtonDown(0)) {
 			
@@ -128,7 +133,7 @@ public class weaponScript : MonoBehaviour {
 		
 		//rifle aim, increases as space bar is held down
 		if(Input.GetKey (KeyCode.Space) && revolverMode == false) {
-			camera.transform.position = Vector3.MoveTowards(camera.transform.position, finalCamera, .5f);
+			camera.transform.position = Vector3.MoveTowards(camera.transform.position, finalCamera, 3.5f * Time.deltaTime);
 			if(specialWeapon == specialMode.RIFLE && weaponCounter < 200) {
 				
 				weaponCounter += (int) 150 * Time.deltaTime;
@@ -138,7 +143,7 @@ public class weaponScript : MonoBehaviour {
 				gunPrime = true;
 			}
 		} else {
-			camera.transform.position = Vector3.MoveTowards(camera.transform.position, initialCamera, .5f);
+			camera.transform.position = Vector3.MoveTowards(camera.transform.position, initialCamera, 3.5f * Time.deltaTime);
 		}
 	}
 	

@@ -43,11 +43,12 @@ public class bulletScript : MonoBehaviour {
 				break;
 			default:
 				//fall after hitting an object
-				body.useGravity = true;
 				break;
 			}
 			
 			
-		}	
+		}
+		
+		body.useGravity = true;	
 	}
 }
