@@ -25,13 +25,13 @@ public class FloorMaker : MonoBehaviour {
 	int maxEnemy = 10; 
 	
 	//counters
-	static int currentFloorMakers = 0; 
+	public static int currentFloorMakers = 0; 
 	static int maxFloorMakers = 10;
 	
 	public static bool entrancePlaced = false; 
 	public static bool startWall = false; 
 	
-	static int endedFloorMakers = 0; 
+	public static int endedFloorMakers = 0; 
 	     
 	//map stuff
 	public static int[,] map = new int[1000, 1000];    
@@ -149,7 +149,7 @@ public class FloorMaker : MonoBehaviour {
 			endedFloorMakers++; 
 			Destroy(gameObject); 
 		} else {
-			Instantiate (exitPreFab, new Vector3(floorPositionX, .5f, floorPositionZ), Quaternion.identity);
+			Instantiate (exitPreFab, new Vector3(floorPositionX, 2f, floorPositionZ), Quaternion.identity);
 			print("wall maker"); 
 			for(int z = 0; z < 1000; z++) {
 				for(int x = 0; x < 1000; x++) {
