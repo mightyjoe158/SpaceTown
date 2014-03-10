@@ -51,6 +51,11 @@
      <Compile Include="Assets\Scripts\FloorMaker.cs" />
      <Compile Include="Assets\Scripts\WallKiller.cs" />
      <Compile Include="Assets\Scripts\WallMaker.cs" />
+     <Compile Include="Assets\Scripts\bulletScript.cs" />
+     <Compile Include="Assets\Scripts\itemScript.cs" />
+     <Compile Include="Assets\Scripts\mouseLook.cs" />
+     <Compile Include="Assets\Scripts\pelletScript.cs" />
+     <Compile Include="Assets\Scripts\weaponScript.cs" />
      <None Include="Assets\Standard Assets\Skyboxes\_skybox info.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
