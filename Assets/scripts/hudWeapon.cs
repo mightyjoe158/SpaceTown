@@ -13,12 +13,12 @@ public class hudWeapon : MonoBehaviour {
 	void Start () {
 		initialPosition = transform.position;
 		activePosition = initialPosition;
-		activePosition.z += 3f;
+		activePosition.z += 5f;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		initialPosition = transform.position;
+		initialPosition = transform.parent.position;
 		activePosition = initialPosition;
 		activePosition.z += 3f;
 		if(avatar.GetComponent<weaponScript>().specialWeapon == gunType) {

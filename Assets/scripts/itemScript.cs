@@ -11,12 +11,17 @@ public class itemScript : MonoBehaviour {
 			if(this.gameObject.name == "rifle" && other.gameObject.name == "avatar") {
 				avatar.GetComponent<weaponScript>().specialWeapon = weaponScript.specialMode.RIFLE;
 				avatar.GetComponent<weaponScript>().specialAmmo = 30;
+				Destroy(this.gameObject);
+				
 			} else if (this.gameObject.name == "shotgun" && other.gameObject.name == "avatar") {
 				avatar.GetComponent<weaponScript>().specialWeapon = weaponScript.specialMode.SHOTGUN;
 				avatar.GetComponent<weaponScript>().specialAmmo = 15;
-			} else if (this.gameObject.name == "chaingun" && other.gameObject.name == "avatar"){
-				avatar.GetComponent<weaponScript>().specialWeapon =	weaponScript.specialMode.CHAINGUN;
+				Destroy(this.gameObject);
+				
+			} else if (this.gameObject.name == "melee" && other.gameObject.name == "avatar"){
+				avatar.GetComponent<weaponScript>().specialWeapon =	weaponScript.specialMode.MELEE;
 				avatar.GetComponent<weaponScript>().specialAmmo = 100;
+				Destroy(this.gameObject);
 			}
 		}
 	}

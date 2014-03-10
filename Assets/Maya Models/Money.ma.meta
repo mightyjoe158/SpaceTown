@@ -1,17 +1,23 @@
 fileFormatVersion: 2
-guid: af3541f165d01f44cad5d6c9aa8f9ce9
+guid: ab701748be8c72b41a59d161cf8bfff2
 ModelImporter:
   serializedVersion: 16
   fileIDToRecycleName:
-    100000: //RootNode
-    100002: place3dTexture1
-    100004: revolvedSurface1
-    400000: //RootNode
-    400002: place3dTexture1
-    400004: revolvedSurface1
-    2300000: revolvedSurface1
-    3300000: revolvedSurface1
-    4300000: revolvedSurface1
+    100000: Camera01
+    100002: Camera02
+    100004: Camera03
+    100006: Dollar_sign_2
+    100008: //RootNode
+    100010: VRayLight01
+    400000: Camera01
+    400002: Camera02
+    400004: Camera03
+    400006: Dollar_sign_2
+    400008: //RootNode
+    400010: VRayLight01
+    2300000: Dollar_sign_2
+    3300000: Dollar_sign_2
+    4300000: Dollar_sign_2
     9500000: //RootNode
   materials:
     importMaterials: 1

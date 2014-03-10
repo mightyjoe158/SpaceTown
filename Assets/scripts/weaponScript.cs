@@ -20,14 +20,13 @@ public class weaponScript : MonoBehaviour {
 	public GameObject camera;
 	Vector3 initialCamera;
 	Vector3 finalCamera;
-	CharacterController cameraController;
 	
 	//set to bullet and pellet prefab	
 	public GameObject bullet;
 	public GameObject pellet;
 	
 	//types of second weapon
-	public enum specialMode {SHOTGUN, RIFLE, CHAINGUN, NONE}
+	public enum specialMode {SHOTGUN, RIFLE, MELEE, NONE}
 	
 	// Use this for initialization
 	void Start () {
@@ -39,7 +38,6 @@ public class weaponScript : MonoBehaviour {
 		weaponCounter = 0f;
 		initialCamera = camera.transform.position;
 		finalCamera = new Vector3(initialCamera.x, initialCamera.y + 7f, initialCamera.z);
-		cameraController = camera.GetComponent<CharacterController>();
 	}
 	
 	// Update is called once per frame
@@ -132,9 +130,10 @@ public class weaponScript : MonoBehaviour {
 		}
 		
 		//rifle aim, increases as space bar is held down
-		if(Input.GetKey (KeyCode.Space) && revolverMode == false) {
+		if(Input.GetKey (KeyCode.Space) && revolverMode == false && specialWeapon == specialMode.RIFLE) {
 			camera.transform.position = Vector3.MoveTowards(camera.transform.position, finalCamera, 3.5f * Time.deltaTime);
-			if(specialWeapon == specialMode.RIFLE && weaponCounter < 200) {
+		
+			if(weaponCounter < 200) {
 				
 				weaponCounter += (int) 150 * Time.deltaTime;
 			}
@@ -150,13 +149,13 @@ public class weaponScript : MonoBehaviour {
 	void FixedUpdate() {
 		
 		//as long is left button is down chaingun will fire
-		if(Input.GetMouseButton(0) && specialWeapon == specialMode.CHAINGUN && specialAmmo > 0) {
+/*		if(Input.GetMouseButton(0) && specialWeapon == specialMode.CHAINGUN && specialAmmo > 0) {
 			bullet.GetComponent<bulletScript>().deviation = 400;
 			GameObject cloneChain = (GameObject) Instantiate (bullet, transform.position, transform.rotation);
 			Physics.IgnoreCollision(cloneChain.collider, transform.collider);
 			
 			specialAmmo--;
-		}
+		}*/
 	}
 	
 }

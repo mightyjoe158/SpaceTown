@@ -9,7 +9,7 @@ public class playerMovement : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		controller = GetComponent<CharacterController>();
-		speed = 10;
+		speed = 5;
 	}
 	
 	// Update is called once per frame

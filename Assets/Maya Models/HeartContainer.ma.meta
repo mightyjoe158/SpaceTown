@@ -1,17 +1,17 @@
 fileFormatVersion: 2
-guid: af3541f165d01f44cad5d6c9aa8f9ce9
+guid: 9692c90a9c15e69469a0035ef20d2b64
 ModelImporter:
   serializedVersion: 16
   fileIDToRecycleName:
-    100000: //RootNode
-    100002: place3dTexture1
-    100004: revolvedSurface1
-    400000: //RootNode
-    400002: place3dTexture1
-    400004: revolvedSurface1
-    2300000: revolvedSurface1
-    3300000: revolvedSurface1
-    4300000: revolvedSurface1
+    100000: heart
+    100002: //RootNode
+    100004: nurbsToPoly1
+    400000: heart
+    400002: //RootNode
+    400004: nurbsToPoly1
+    2300000: nurbsToPoly1
+    3300000: nurbsToPoly1
+    4300000: nurbsToPoly1
     9500000: //RootNode
   materials:
     importMaterials: 1

@@ -1,13 +1,14 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\revolverCylinder.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\hudWeapon.cs">
     <Files>
       <File FileName="Assets\scripts\HUDscript.cs" Line="1" Column="1" />
-      <File FileName="Assets\scripts\weaponScript.cs" Line="48" Column="23" />
-      <File FileName="Assets\scripts\itemScript.cs" Line="24" Column="1" />
-      <File FileName="Assets\scripts\bulletScript.cs" Line="45" Column="35" />
-      <File FileName="Assets\scripts\playerMovement.cs" Line="37" Column="5" />
-      <File FileName="Assets\scripts\revolverCylinder.cs" Line="18" Column="1" />
+      <File FileName="Assets\scripts\weaponScript.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\itemScript.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\bulletScript.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\playerMovement.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\revolverCylinder.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\hudWeapon.cs" Line="25" Column="26" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
