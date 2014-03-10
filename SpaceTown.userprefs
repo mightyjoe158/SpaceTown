@@ -1,10 +1,11 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/FloorMaker.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\itemScript.cs">
     <Files>
-      <File FileName="../Class6/Assets/Scripts/Generator.cs" Line="62" Column="109" />
-      <File FileName="Assets/Scripts/FloorMaker.cs" Line="24" Column="31" />
-      <File FileName="Assets/Scripts/WallMaker.cs" Line="39" Column="2" />
+      <File FileName="Assets\scripts\itemScript.cs" Line="17" Column="7" />
+      <File FileName="Assets\scripts\weaponScript.cs" Line="45" Column="2" />
+      <File FileName="Assets\scripts\bulletScript.cs" Line="33" Column="50" />
+      <File FileName="Assets\scripts\pelletScript.cs" Line="37" Column="50" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
