@@ -96,7 +96,7 @@ public class weaponScript : MonoBehaviour {
 			if(revolverMode && revolverAmmo < 6) {
 				revolverAmmo++;
 				gunPrime = false;
-			} else {
+			} else if(!revolverMode){
 				specialAmmo++;
 				gunPrime = false;
 			}

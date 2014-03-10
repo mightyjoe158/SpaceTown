@@ -7,6 +7,11 @@ public class itemScript : MonoBehaviour {
 //	static specialMode mode;
 	
 	void OnTriggerStay(Collider other) {
+		if(this.gameObject.name == "health" && other.gameObject.name == "avatar") {
+			other.GetComponent<weaponScript>().hp += 10;
+			Destroy(this.gameObject);
+		}
+		
 		if(Input.GetKeyDown(KeyCode.G)) {
 			if(this.gameObject.name == "rifle" && other.gameObject.name == "avatar") {
 				avatar.GetComponent<weaponScript>().specialWeapon = weaponScript.specialMode.RIFLE;

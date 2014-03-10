@@ -20,7 +20,7 @@ public class hudWeapon : MonoBehaviour {
 	void Update () {
 		initialPosition = transform.parent.position;
 		activePosition = initialPosition;
-		activePosition.z += 3f;
+		activePosition.z += 2.9f;
 		if(avatar.GetComponent<weaponScript>().specialWeapon == gunType) {
 			transform.position = Vector3.MoveTowards(transform.position, activePosition, 5f * Time.deltaTime);
 		} else {

@@ -11,9 +11,8 @@ public class HUDscript : MonoBehaviour {
 	void Update() {
 		text = "";
 		text += "$ " + player.GetComponent<weaponScript>().hp;
-		text += "    Prime: " + player.GetComponent<weaponScript>().gunPrime;
-		text += "\nGun: " + player.GetComponent<weaponScript>().revolverMode; 
-		text += " " + player.GetComponent<weaponScript>().revolverAmmo + " x <==|";
+		text += "    Prime: " + player.GetComponent<weaponScript>().gunPrime; 
+		text += "\n" + player.GetComponent<weaponScript>().revolverAmmo + " x <==|";
 		text += "\nWeapon: " + (int) player.GetComponent<weaponScript>().weaponCounter + " ";
 		text += player.GetComponent<weaponScript>().specialAmmo + " x ||";
 		
