@@ -11,27 +11,28 @@ public class FloorMaker : MonoBehaviour {
 	public Transform enemyPrefab;
 	public Transform entrancePreFab; 
 	public Transform exitPreFab;
+	public Transform playerPreFab; 
 	
 	//maxs and mins 
 	int currentFloor = 0; 
 	int floorMax = 800; 
 	
-	int minX = 0; 
-	int minZ = 0; 
-	int maxX = 1000; 
-	int maxZ = 1000; 
+	//int minX = 0; 
+	//int minZ = 0; 
+	//int maxX = 1000; 
+	//int maxZ = 1000; 
 	
 	int currentEnemy = 0; 
 	int maxEnemy = 10; 
 	
 	//counters
-	static int currentFloorMakers = 0; 
+	public static int currentFloorMakers = 0; 
 	static int maxFloorMakers = 10;
 	
 	public static bool entrancePlaced = false; 
 	public static bool startWall = false; 
 	
-	static int endedFloorMakers = 0; 
+	public static int endedFloorMakers = 0; 
 	     
 	//map stuff
 	public static int[,] map = new int[1000, 1000];    
@@ -129,7 +130,8 @@ public class FloorMaker : MonoBehaviour {
 				currentFloorMakers++; 
 			}	
 			if(currentFloor == 1 && entrancePlaced == false) {
-				Instantiate (entrancePreFab, new Vector3(floorPositionX, 0, floorPositionZ), Quaternion.identity);
+				Instantiate (entrancePreFab, new Vector3(floorPositionX, 1f, floorPositionZ), Quaternion.identity);
+				Instantiate (playerPreFab, new Vector3(floorPositionX, 10f, floorPositionZ), Quaternion.identity);
 				Instantiate (wallPreFab, new Vector3(floorPositionX-1, 0, floorPositionZ+1), Quaternion.identity);
 				Instantiate (wallPreFab, new Vector3(floorPositionX, 0, floorPositionZ+1), Quaternion.identity);
 				Instantiate (wallPreFab, new Vector3(floorPositionX+1, 0, floorPositionZ+1), Quaternion.identity);
@@ -140,21 +142,18 @@ public class FloorMaker : MonoBehaviour {
 				entrancePlaced = true;
 			} 	
 		}
-		if(currentFloorMakers >= maxFloorMakers && currentFloor == floorMax) {
-			print ("start wall"); 
-			startWall = true; 
-		}
+		
 		if(currentFloor == floorMax && endedFloorMakers < maxFloorMakers) {
 			Instantiate (chestPreFab, new Vector3(floorPositionX, .5f, floorPositionZ), Quaternion.identity);
 			endedFloorMakers++; 
 			Destroy(gameObject); 
 		} else {
-			Instantiate (exitPreFab, new Vector3(floorPositionX, .5f, floorPositionZ), Quaternion.identity);
+			Instantiate (exitPreFab, new Vector3(floorPositionX, 1.2f, floorPositionZ), Quaternion.identity);
 			print("wall maker"); 
 			for(int z = 0; z < 1000; z++) {
 				for(int x = 0; x < 1000; x++) {
 					if(FloorMaker.map[x, z] == possibleWalls) {
-						Instantiate (wallPreFab, new Vector3((float)x, 0, (float)z), Quaternion.identity);
+						Instantiate (wallPreFab, new Vector3((float)x, .5f, (float)z), Quaternion.identity);
 						}
 					}
 				}

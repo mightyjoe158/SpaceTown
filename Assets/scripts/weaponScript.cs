@@ -6,6 +6,7 @@ public class weaponScript : MonoBehaviour {
 	public int hp;
 	public int revolverAmmo;
 	public int specialAmmo;
+	public int dynamiteAmmo; 
 	
 	//weapon counter is used for reloading and priming
 	public float weaponCounter;
@@ -20,10 +21,12 @@ public class weaponScript : MonoBehaviour {
 	public GameObject camera;
 	Vector3 initialCamera;
 	Vector3 finalCamera;
+	Vector3 dynamiteDistance; 
 	
 	//set to bullet and pellet prefab	
 	public GameObject bullet;
 	public GameObject pellet;
+	public GameObject dynamite;
 	
 	//types of second weapon
 	public enum specialMode {SHOTGUN, RIFLE, MELEE, NONE}
@@ -33,11 +36,13 @@ public class weaponScript : MonoBehaviour {
 		hp = 100;
 		revolverAmmo = 6;
 		specialAmmo = 100;
+		dynamiteAmmo = 100; 
 		revolverMode = true;
 		gunPrime = true;
 		weaponCounter = 0f;
 		initialCamera = camera.transform.position;
 		finalCamera = new Vector3(initialCamera.x, initialCamera.y + 7f, initialCamera.z);
+		dynamiteDistance = new Vector3(0f, 0f, 1f); 
 	}
 	
 	// Update is called once per frame
@@ -101,7 +106,12 @@ public class weaponScript : MonoBehaviour {
 				gunPrime = false;
 			}
 		}
-		
+		if (Input.GetKey(KeyCode.F)) {
+			if(dynamiteAmmo > 0) {			
+				Instantiate(dynamite, transform.position + dynamiteDistance, transform.rotation);	
+					
+			}	
+		}
 		//switch active weapon
 		if (Input.GetKeyDown (KeyCode.Q)) {
 			if(revolverMode && specialWeapon != specialMode.NONE) {
